@@ -10,21 +10,43 @@ const Container=styled.div`
 width:1400px;
 display:flex;
 justify-content:space-between;
+padding:10px 0px;
 `
 
-const Links=styled.div``
+const Links=styled.div`
+display:flex;
+align-items:center;
+gap: 50px;
+`
 
-const Icons=styled.div``
+const Icons=styled.div`
+display:flex;
+align-items:center;
+gap:20px;`
 
-const Logo=styled.img``
+const Logo=styled.img`height:100px;`
 
-const List=styled.ul``
+const List=styled.ul`display:flex;
+align-items:center;
+gap: 20px;
+list-style:none;
+`
 
 const ListItem=styled.li``
 
-const Icon=styled.img``
+const Icon=styled.img`
+width:20px;
+cursor:pointer;`
 
-const Button=styled.button``
+const Button=styled.button`
+width: 100px;
+padding:10px;
+background-color:#da4ea2;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+`
 
 
 
@@ -36,7 +58,7 @@ const Navabar = () => {
     <Section>
     <Container>
     <Links>
-        <Logo src="./img/logo3.png"/>
+        <Logo src="./img/logo5.png"/>
     <List>
         <ListItem>Home</ListItem>
         <ListItem>Studio</ListItem>
@@ -49,7 +71,6 @@ const Navabar = () => {
         <Icon src="./img/search.png"/>
         <Button>Hire Now</Button>
     </Icons>
-    Navabar
     </Container>
     </Section>
   )
