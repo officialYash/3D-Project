@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import MapChart from './Map'
+import Map from './Map'
 
 const Container = styled.div`
 width:   100%;
@@ -55,20 +57,26 @@ flex-direction:column;
 gap:25px;
 `
 
+const handleSubmit = e =>{
+  e.preventDefault()
+}
+
 const Contact = () => {
   return (
     <Section>
     <Container>
       <Left>
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <Title>Contact Us</Title>
           <Input placeholder='Name'/>
           <Input placeholder='Email'/>
           <TextArea placeholder='Write your message' rows={10}/>
-          <Button>Send</Button>
+          <Button type='submit'>Send</Button>
         </Form>
       </Left>
-      <Right></Right>
+      <Right>
+        <MapChart/>
+      </Right>
     </Container>
 
     </Section>
