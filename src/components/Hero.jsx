@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Navabar from './Navabar'
+import { Canvas } from '@react-three/fiber'
+import { MeshDistortMaterial, OrbitControls, Sphere } from '@react-three/drei'
 
 
 const Section = styled.div`
@@ -99,7 +101,18 @@ const Hero = () => {
       <Button>Learn More</Button>
     </Left>
     <Right>
-    {/* 3D Model  */}
+    <Canvas camera={{fov:25 ,position:[5,5,5]}}>
+    <OrbitControls enableZoom={false} autoRotate/>
+    <ambientLight intensity={1} />
+    <directionalLight position={[3,2,1]} />
+    <Sphere args={[1,100,200]} scale={1.9}>
+    <MeshDistortMaterial
+    color="#3d1c56"
+    attach="material" 
+    distort={0.5}
+    speed={2}/>
+    </Sphere>   
+    </Canvas>    
     <Img src="./img/moon.png"/>
     </Right>
     </Container>
