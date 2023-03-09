@@ -20,9 +20,17 @@ justify-content:space-between;
 `
 const Left= styled.div`
 flex:1;
+
+@media only screen and (max-width: 768px) {
+display:none;
+  }
 `
 const Title=styled.h1`
 font-size:74px;
+
+@media only screen and (max-width: 768px) {
+font-size:60px;
+  }
 `;
 const WhatWeDo=styled.div`display:flex;
 align-items:center;
@@ -55,6 +63,11 @@ display:flex;
 flex-direction:column;
 gap:20px;
 justify-content:center;
+
+@media only screen and (max-width: 768px) {
+align-items:center;
+text-align:center;
+  }
 `
 
 
